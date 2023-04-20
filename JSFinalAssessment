@@ -1,0 +1,38 @@
+const ITEMS = []
+
+function mintNFT (name, ShirtType, ShirtColor, accessories) {
+    const NFT = { 
+        "name":  name,
+        "ShirtType": ShirtType,
+        "ShirtColor": ShirtColor,
+        "accessories": accessories
+    }
+    ITEMS.push (NFT);
+    console.log ("Minted: " + name);
+}
+
+
+function listITEMS() {
+    for (let i = 0; i < ITEMS.length; i++) {
+        console.log("\nID \t\t\t\t" + (i + i));
+        console.log("\nName: \t\t\t" + ITEMS[i].name);
+        console.log("ShirtType: \t\t" + ITEMS[i].ShirtType);
+        console.log("ShirtColor: \t" + ITEMS[i].ShirtColor);
+        console.log("accessories: \t" + ITEMS[i].accessories);
+    }
+
+}
+
+
+function getTotalSupply () {
+    console.log("\nTotal Number Of NFTs Minted: " + ITEMS.length)
+
+}
+
+mintNFT ("Sam", "crop top", "yellow", "necklace");
+mintNFT ("Eya", "tube", "pink", "earrings");
+mintNFT ("Yuri", "oversized", "blue", "hat");
+mintNFT ("Amy", "tank top", "green", "ring");
+mintNFT ("Joros", "polo", "red", "bracelet");
+listITEMS ();
+getTotalSupply
